@@ -10,7 +10,6 @@
 
     <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
     <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
-    <link rel="import" href="../../paper-button/paper-button.html">
     <link rel="import" href="../accent-card.html">
 
     <style is="custom-style" include="demo-pages-shared-styles">
@@ -46,34 +45,6 @@
             horizontal>
             <div slot="content">This card has a cyan accent color.</div>
           </accent-card>
-        </template>
-      </demo-snippet>
-
-      <h3>accent-card as button</h3>
-      <demo-snippet>
-        <template>
-          <accent-card 
-            id="button1"
-            accent-color="grey"
-            button 
-            heading="Accent Card Button">
-            <div slot="content">This card is clickable.</div>
-          </accent-card>
-          <accent-card 
-            id="button2"
-            accent-color="grey"
-            button 
-            disabled
-            heading="Disabled Accent Card Button">
-            <div slot="content">This card is not clickable.</div>
-          </accent-card>
-          <script>
-            let button1 = document.getElementById('button');
-            button1.addEventListener('accent-card-tap',function(e){
-              console.log('#button accent-card-tap',e);
-              alert('You clicked on '+button1.heading+'!');
-            });
-          </script>
         </template>
       </demo-snippet>
 
@@ -146,6 +117,34 @@
             heading="Flat Dark Accent Card">
             <div slot="content">This is a flat dark accent card.</div>
           </accent-card>
+        </template>
+      </demo-snippet>
+      
+      <h3>accent-card as button</h3>
+      <demo-snippet>
+        <template>
+          <accent-card 
+            id="button1"
+            accent-color="purple"
+            button 
+            heading="Accent Card Button">
+            <div slot="content">This card is clickable.</div>
+          </accent-card>
+          <accent-card 
+            id="button2"
+            accent-color="purple"
+            button 
+            disabled
+            heading="Disabled Accent Card Button">
+            <div slot="content">This card is not clickable.</div>
+          </accent-card>
+          <script>
+            let button1 = document.getElementById('button1');
+            button1.addEventListener('accent-card-tap',function(e){
+              console.log('#button accent-card-tap',e);
+              alert('You clicked on '+button1.heading+'!');
+            });
+          </script>
         </template>
       </demo-snippet>
       
